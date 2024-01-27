@@ -1,1 +1,64 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Scrollbar //
+::-webkit-scrollbar {
+  width: 12px;
+  background: #1e1f26;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  border: 2px outset #03dac6;
+  background: -webkit-gradient(
+    linear, left bottom, left top,
+    color-stop(0.44, #03dac6),
+    color-stop(0.72, #04b8a6),
+    color-stop(0.86, #026d62)
+  );
+}
+// End Scrollbar //
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: "ROBOTO", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 5vw;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  letter-spacing: 0.5rem;
+  color: #03dac6;
+  transition: all 0.3s ease;
+  z-index: 3;
+
+  &:hover {
+    transform: translate3d(0, -10px, 22px);
+    color: #ff0266;
+  }
+}
+
+h2 {
+  font-size: 2vw;
+  letter-spacing: 0.3rem;
+  font-family: "ROBOTO", sans-serif;
+  font-weight: 300;
+  color: #faebd7;
+  z-index: 4;
+}

@@ -8,3 +8,16 @@
   right: 0;
   z-index: auto;
 }
+
+.hero, .section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  height: 100vh;
+  padding: 0 2em;
+  background-color: #1e1f26;
+}

@@ -1,0 +1,26 @@
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 90%;
+}
+
+.mockup-browser .mockup-browser-toolbar {
+  padding-right: calc(4.8rem + 12px);
+
+  .input {
+    background-color: #272930 !important;
+  }
+}
+
+.content .mockup-browser {
+  height: 60vh;
+  width: 50vw;
+}
+
+iframe {
+  height: calc(100% - 54px); // 100% - toolbar
+  width: 100%;
+}

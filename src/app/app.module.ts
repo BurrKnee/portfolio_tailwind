@@ -8,6 +8,8 @@ import { HeroComponent } from './hero/hero.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
+import { ExperienceComponent } from './experience/experience.component';
+
 import { ProjectsComponent } from './projects/projects.component';
 
 
@@ -18,6 +20,7 @@ import { ProjectsComponent } from './projects/projects.component';
     NavbarComponent,
     AboutComponent,
     FooterComponent,
+    ExperienceComponent,
     ProjectsComponent
   ],
   imports: [

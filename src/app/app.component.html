@@ -1,17 +1,17 @@
 <app-navbar-component class="navbar"></app-navbar-component>
 
-<app-hero-component class="hero"></app-hero-component>
+<app-hero-component #hero class="hero" id="section-hero"></app-hero-component>
 
 <div id="background-particles" class="particle-background"></div>
 
 <main class="main">
-  <app-about-component class="section" id="section-about"></app-about-component>
+  <app-about-component #about class="section" id="section-about"></app-about-component>
 
   <!-- <app-experience-component class="section" id="section-experience"></app-experience-component> -->
 
-  <app-projects-component class="section" id="section-projects"></app-projects-component>
+  <app-projects-component #projects class="section" id="section-projects"></app-projects-component>
 
   <!-- <app-contact-component class="section" id="section-contact"></app-contact-component> -->
 </main>
 
-<app-footer-component class="" id="section-footer"></app-footer-component>
+<app-footer-component id="section-footer"></app-footer-component>

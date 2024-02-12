@@ -1,11 +1,11 @@
 <div class="navbar bg-base-100 z-50v">
   <div class="navbar-start">
-    <a class="btn btn-ghost text-2xl">Bernie Belcher</a>
+    <a class="btn btn-ghost text-2xl" [ngxScrollTo]="'#section-hero'">Bernie Belcher</a>
   </div>
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
-      <li class="px-4"><a class="btn btn-ghost text-2xl">About</a></li>
-      <li class="px-4"><a class="btn btn-ghost text-2xl">Projects</a></li>
+      <li class="px-4"><a class="btn btn-ghost text-2xl" [ngxScrollTo]="'#section-about'">About</a></li>
+      <li class="px-4"><a class="btn btn-ghost text-2xl" [ngxScrollTo]="'#section-projects'">Projects</a></li>
       <li class="px-4"><a class="btn btn-ghost text-2xl">Contact</a></li>
     </ul>
   </div>

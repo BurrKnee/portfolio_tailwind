@@ -9,8 +9,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { ExperienceComponent } from './experience/experience.component';
-
 import { ProjectsComponent } from './projects/projects.component';
+
+import { BadgeComponent } from './components/badge/badge.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ProjectsComponent } from './projects/projects.component';
     AboutComponent,
     FooterComponent,
     ExperienceComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    BadgeComponent
   ],
   imports: [
     BrowserModule,

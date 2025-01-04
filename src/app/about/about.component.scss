@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: space-evenly;
   width: 90%;
+  z-index: 10;
 
   div:last-of-type {
     width: 70%;
@@ -68,3 +69,11 @@ ul.dev-logos {
   }
 }
 
+.blob-1 {
+  position: absolute;
+  width: 400px;
+  right: 100px;
+  margin-top: 3em;
+  opacity: 0.33;
+  z-index: 1;
+}

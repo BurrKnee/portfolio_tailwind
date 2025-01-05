@@ -5,12 +5,8 @@ import { AboutComponent } from './about.component';
 describe('AboutComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      declarations: [
-        AboutComponent
-      ],
+      imports: [RouterTestingModule],
+      declarations: [AboutComponent],
     }).compileComponents();
   });
 

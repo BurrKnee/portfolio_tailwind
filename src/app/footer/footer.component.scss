@@ -1,6 +1,6 @@
 .footer {
   display: flex;
-  padding: 2rem 1rem;
+  padding: 2rem 1.5rem;
 
   span {
     display: flex;
@@ -27,7 +27,7 @@
 #pulsing-heart:before,
 #pulsing-heart:after {
   position: absolute;
-  content: "";
+  content: '';
   left: 10px;
   top: 0;
   width: 10px;
@@ -48,12 +48,30 @@
 
 @keyframes pulse {
   10% {
-    transform: scale(1.1)
+    transform: scale(1.1);
   }
 }
 
 @keyframes pulsecolor {
   10% {
-    background: #dd0000
+    background: #dd0000;
+  }
+}
+
+a {
+  img {
+    width: 26px;
+
+    &:not(:first-of-type) {
+      display: none;
+    }
+  }
+
+  &:hover img {
+    display: none;
+
+    &:not(:first-of-type) {
+      display: block;
+    }
   }
 }

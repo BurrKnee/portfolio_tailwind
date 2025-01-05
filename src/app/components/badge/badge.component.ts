@@ -3,14 +3,12 @@ import { Component, Input, OnInit } from '@angular/core';
 @Component({
   selector: 'app-badge-component',
   templateUrl: './badge.component.html',
-  styleUrls: ['./badge.component.scss']
+  styleUrls: ['./badge.component.scss'],
 })
 export class BadgeComponent implements OnInit {
-  @Input() value: string = "";
+  @Input() value: string = '';
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

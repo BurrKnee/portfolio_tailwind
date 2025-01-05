@@ -13,7 +13,6 @@ import { ProjectsComponent } from './projects/projects.component';
 
 import { BadgeComponent } from './components/badge/badge.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,14 +22,10 @@ import { BadgeComponent } from './components/badge/badge.component';
     FooterComponent,
     ExperienceComponent,
     ProjectsComponent,
-    BadgeComponent
+    BadgeComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ScrollToModule.forRoot()
-  ],
+  imports: [BrowserModule, AppRoutingModule, ScrollToModule.forRoot()],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

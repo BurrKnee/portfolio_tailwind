@@ -7,7 +7,7 @@
 // Firefox //
 * {
   scrollbar-width: auto;
-  scrollbar-color: #504099 #1E1F26;
+  scrollbar-color: #504099 #1e1f26;
 }
 
 // Chrome, Edge, and Safari //
@@ -16,13 +16,13 @@
 }
 
 *::-webkit-scrollbar-track {
-  background: #1E1F26;
+  background: #1e1f26;
 }
 
 *::-webkit-scrollbar-thumb {
   background-color: #504099;
   border-radius: 10px;
-  border: 3px solid #1E1F26;
+  border: 3px solid #1e1f26;
 }
 // End Scrollbar //
 
@@ -32,7 +32,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "ROBOTO", sans-serif;
+  font-family: 'ROBOTO', sans-serif;
 }
 
 a {
@@ -40,7 +40,7 @@ a {
 }
 
 h1 {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 5vw;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -57,7 +57,7 @@ h1 {
 h2 {
   font-size: 2vw;
   letter-spacing: 0.3rem;
-  font-family: "ROBOTO", sans-serif;
+  font-family: 'ROBOTO', sans-serif;
   font-weight: 300;
   color: #faebd7;
   z-index: 4;

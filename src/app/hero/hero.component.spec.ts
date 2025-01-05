@@ -5,12 +5,8 @@ import { HeroComponent } from './hero.component';
 describe('HeroComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      declarations: [
-        HeroComponent
-      ],
+      imports: [RouterTestingModule],
+      declarations: [HeroComponent],
     }).compileComponents();
   });
 

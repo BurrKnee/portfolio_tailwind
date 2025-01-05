@@ -1,7 +1,9 @@
 .navbar {
   position: fixed;
   z-index: 100;
+  padding: 0;
   background-color: #1e1f26;
+  border-bottom: 2px solid #1e1f26;
 }
 
 .particle-background {
@@ -15,7 +17,8 @@
   z-index: auto;
 }
 
-.hero, .section {
+.hero,
+.section {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;

@@ -7,18 +7,18 @@ declare let particlesJS: any;
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
   title: string = 'Bernie_Belcher_Portfolio';
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
     this.invokeParticles();
   }
 
   invokeParticles(): void {
-    particlesJS('background-particles', ParticlesConfig, function() {});
+    particlesJS('background-particles', ParticlesConfig, function () {});
   }
 }

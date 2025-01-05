@@ -74,4 +74,14 @@ a {
       display: block;
     }
   }
+
+  .material-symbols-outlined {
+    font-size: 26px;
+    color: #445d72;
+    cursor: pointer;
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
 }

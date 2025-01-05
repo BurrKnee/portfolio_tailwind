@@ -3,6 +3,8 @@
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
+  align-items: center;
+  gap: 18px;
   list-style: none;
   padding: 0;
   margin-right: 20px;
@@ -11,7 +13,7 @@
     display: flex;
 
     img {
-      width: 42px;
+      width: 34px;
 
       &:not(:first-of-type) {
         display: none;
@@ -24,6 +26,20 @@
       &:not(:first-of-type) {
         display: block;
       }
+    }
+  }
+
+  a {
+    display: flex;
+  }
+
+  .material-symbols-outlined {
+    font-size: 34px;
+    color: #445d72;
+    cursor: pointer;
+
+    &:hover {
+      color: #ffffff;
     }
   }
 }

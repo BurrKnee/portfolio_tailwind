@@ -90,7 +90,10 @@
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",
             "assets": ["src/assets"],
-            "styles": ["src/styles.scss"],
+            "styles": [
+              "src/styles.scss",
+              "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+            ],
             "scripts": []
           }
         }

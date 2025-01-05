@@ -1,26 +1,34 @@
 <footer class="footer bg-base-100">
-  <span class="items-left">
-    <p>Copyright © {{ currentYear }} - All right reserved</p>
-  </span>
-  <span class="items-center">
-    Designed with
-    <div class="heart-wrapper"><div id="pulsing-heart"></div></div>
-    by<a href="https://www.linkedin.com/in/jigar-sable"> Bernie Belcher</a>
-  </span>
-  <span></span>
-  <nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
-    <a href="https://www.linkedin.com/in/bernie-belcher/" target="_blank">
-      <img src="./assets/svg/logo/linkedin.svg" alt="LinkedIn" />
-      <img src="./assets/svg/logo/linkedin-color.svg" alt="LinkedIn" />
-    </a>
-    <a href="https://github.com/BurrKnee" target="_blank">
-      <img src="./assets/svg/logo/github.svg" alt="Github" />
-      <img src="./assets/svg/logo/github-color.svg" alt="Github" />
-    </a>
-    <a href="mailto:bernie.belcher@outlook.com?subject=Resume Referral" title="bernie.belcher@outlook.com">
-      <span class="material-symbols-outlined">
-        mail
-      </span>
-    </a>
-  </nav>
+  <div class="footer-content">
+    <!-- Left-Aligned Items -->
+    <div class="left-items"></div>
+
+    <!-- Centered Items -->
+    <span class="center-items">
+      Designed with
+      <div class="heart-wrapper"><div id="pulsing-heart"></div></div>
+      by
+      <a href="https://www.linkedin.com/in/jigar-sable">
+        Bernie Belcher © {{ currentYear }}</a
+      >
+    </span>
+
+    <!-- Right-Aligned Items -->
+    <nav class="right-items">
+      <a href="https://www.linkedin.com/in/bernie-belcher/" target="_blank">
+        <img src="./assets/svg/logo/linkedin.svg" alt="LinkedIn" />
+        <img src="./assets/svg/logo/linkedin-color.svg" alt="LinkedIn" />
+      </a>
+      <a href="https://github.com/BurrKnee" target="_blank">
+        <img src="./assets/svg/logo/github.svg" alt="Github" />
+        <img src="./assets/svg/logo/github-color.svg" alt="Github" />
+      </a>
+      <a
+        href="mailto:bernie.belcher@outlook.com?subject=Resume Referral"
+        title="bernie.belcher@outlook.com"
+      >
+        <span class="material-symbols-outlined">mail</span>
+      </a>
+    </nav>
+  </div>
 </footer>

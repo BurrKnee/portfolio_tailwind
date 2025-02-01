@@ -86,7 +86,14 @@
       padding: 1rem;
 
       .project-button a {
+        display: flex;
+        align-items: center;
         color: #000000;
+
+        .material-symbols-outlined {
+          font-size: 28px;
+          font-weight: bold;
+        }
       }
     }
   }

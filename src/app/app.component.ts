@@ -19,6 +19,10 @@ export class AppComponent implements OnInit {
   }
 
   invokeParticles(): void {
+    if (typeof particlesJS !== 'function') {
+      return;
+    }
+
     particlesJS('background-particles', ParticlesConfig, function () {});
   }
 }

@@ -31,4 +31,18 @@
 
 .hero {
   height: 100vh;
+  min-height: 100svh;
+}
+
+@media (max-width: 768px) {
+  .hero,
+  .section {
+    padding: 4.5rem 1.25rem;
+  }
+
+  .hero {
+    height: auto;
+    min-height: 100svh;
+    padding-top: 7rem;
+  }
 }

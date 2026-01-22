@@ -46,5 +46,24 @@
         </a>
       </li>
     </ul>
+    <div class="dropdown dropdown-end lg:hidden">
+      <label tabindex="0" class="btn btn-ghost ml-2">
+        <span class="material-symbols-outlined">menu</span>
+      </label>
+      <ul
+        tabindex="0"
+        class="menu menu-sm dropdown-content mt-2 z-[1] rounded-box bg-base-100 p-2 shadow right-0 mobile-menu"
+      >
+        <li>
+          <a [ngxScrollTo]="'#section-about'">About</a>
+        </li>
+        <li>
+          <a [ngxScrollTo]="'#section-experience'">Experience</a>
+        </li>
+        <li>
+          <a [ngxScrollTo]="'#section-projects'">Projects</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>

@@ -43,3 +43,23 @@
     }
   }
 }
+
+.mobile-menu a {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .social-logos {
+    gap: 12px;
+    margin-right: 8px;
+
+    li img {
+      width: 26px;
+    }
+
+    .material-symbols-outlined {
+      font-size: 26px;
+    }
+  }
+}

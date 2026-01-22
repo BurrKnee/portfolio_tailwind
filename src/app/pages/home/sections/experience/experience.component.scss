@@ -5,3 +5,15 @@
   width: 60%;
   text-align: left;
 }
+
+@media (max-width: 1024px) {
+  .content {
+    width: 80%;
+  }
+}
+
+@media (max-width: 640px) {
+  .content {
+    width: 100%;
+  }
+}

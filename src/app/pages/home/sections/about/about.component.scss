@@ -30,8 +30,9 @@
 ul.dev-logos {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
   list-style: none;
   padding: 0;
 
@@ -76,4 +77,38 @@ ul.dev-logos {
   margin-top: 3em;
   opacity: 0.33;
   z-index: 1;
+}
+
+@media (max-width: 900px) {
+  .content div:last-of-type {
+    width: 100%;
+  }
+
+  .memoji {
+    width: 45%;
+    max-width: 260px;
+  }
+
+  .content span {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 640px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .content span {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .memoji {
+    width: 60%;
+  }
+
+  ul.dev-logos li img {
+    width: 56px;
+  }
 }

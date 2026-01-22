@@ -110,3 +110,22 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .left-items,
+  .center-items,
+  .right-items {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .right-items {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+}

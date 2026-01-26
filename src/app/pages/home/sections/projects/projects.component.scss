@@ -9,16 +9,20 @@
 
 .project-grid {
   margin: 0px auto 6rem;
-  display: grid;
-  max-width: calc(1280px + 2rem);
+  display: flex;
+  flex-wrap: wrap;
+  max-width: calc(1440px + 2rem);
   padding: 0px 1rem;
   width: 100%;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 2rem;
+  row-gap: 2.5rem;
+  column-gap: 1.5rem;
+  justify-content: center;
 
   .project {
-    margin: 0px auto;
+    margin: 0px;
     padding: 1rem;
+    flex: 1 1 360px;
+    max-width: 420px;
     border-radius: 2rem;
     background-color: #ffffff;
     border: 1px solid #000000;
@@ -38,7 +42,7 @@
         display: flex;
         justify-content: center;
         width: 100%;
-        height: auto;
+        height: 250px;
         background-size: 100%;
         background-position: center top;
         background-repeat: no-repeat;
@@ -48,7 +52,10 @@
         overflow: hidden;
 
         img {
-          max-height: 250px;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: top center;
         }
       }
 
@@ -101,19 +108,31 @@
 
 @media (max-width: 1024px) {
   .project-grid {
-    grid-template-columns: 1fr 1fr;
+    gap: 1.75rem;
+  }
+}
+
+@media (min-width: 2000px) {
+  .project-grid {
+    max-width: calc(1680px + 2rem);
+  }
+
+  .project-grid .project {
+    flex-basis: 420px;
+    max-width: 480px;
   }
 }
 
 @media (max-width: 700px) {
   .project-grid {
-    grid-template-columns: 1fr;
     gap: 1.5rem;
     padding: 0;
   }
 
   .project-grid .project {
     padding: 0.75rem;
+    flex-basis: 100%;
+    max-width: 100%;
   }
 
   .project-grid .project .project-wrap .project-text .project-title {

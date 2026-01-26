@@ -24,10 +24,23 @@
     flex: 1 1 360px;
     max-width: 420px;
     border-radius: 2rem;
-    background-color: #ffffff;
+    background-color: #f1eef8;
     border: 1px solid #000000;
     box-shadow: rgba(43, 105, 251, 0.06) 0px 0px 1rem 1rem;
     position: relative;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease,
+      border-color 0.2s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      border-color: rgba(43, 105, 251, 0.35);
+      box-shadow:
+        rgba(43, 105, 251, 0.25) 0px 14px 32px -6px,
+        0 0 60px rgba(109, 40, 217, 0.45),
+        0 0 120px rgba(109, 40, 217, 0.25);
+    }
 
     .project-wrap {
       display: grid;
@@ -67,8 +80,8 @@
         gap: 1rem;
         padding: 0rem 1rem;
         color: #0a001b;
-        background: #fafeff;
-        box-shadow: #fafeff 0px 20px 4rem 6rem;
+        background: #f1eef8;
+        box-shadow: #f1eef8 0px 20px 4rem 6rem;
 
         .project-title {
           font-size: 22px;
@@ -96,6 +109,11 @@
         display: flex;
         align-items: center;
         color: #000000;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: #6d28d9;
+        }
 
         .material-symbols-outlined {
           font-size: 28px;
@@ -103,6 +121,7 @@
         }
       }
     }
+
   }
 }
 

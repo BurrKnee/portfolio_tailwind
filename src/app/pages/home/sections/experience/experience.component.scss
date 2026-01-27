@@ -4,16 +4,35 @@
   align-items: center;
   width: 60%;
   text-align: left;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.content ol {
+  width: 100%;
+  box-sizing: border-box;
 }
 
 @media (max-width: 1024px) {
   .content {
-    width: 80%;
+    width: 100%;
   }
 }
 
 @media (max-width: 640px) {
   .content {
-    width: 92%;
+    width: 100%;
+  }
+
+  .content ol {
+    padding-left: 1.25rem;
+  }
+
+  .content ol > li {
+    margin-left: 0.75rem;
+  }
+
+  .content ol > li > span {
+    inset-inline-start: -0.75rem !important;
   }
 }

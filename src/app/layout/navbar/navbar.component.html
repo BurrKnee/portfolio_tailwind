@@ -1,23 +1,29 @@
 <div class="navbar bg-base-100 z-50v">
   <div class="navbar-start">
-    <a class="btn btn-ghost text-2xl" [ngxScrollTo]="'#section-hero'"
+    <a class="btn btn-ghost text-2xl" (click)="scrollToSection('section-hero')"
       >Bernie Belcher</a
     >
   </div>
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
       <li class="px-4">
-        <a class="btn btn-ghost text-2xl" [ngxScrollTo]="'#section-about'"
+        <a
+          class="btn btn-ghost text-2xl"
+          (click)="scrollToSection('section-about')"
           >About</a
         >
       </li>
       <li class="px-4">
-        <a class="btn btn-ghost text-2xl" [ngxScrollTo]="'#section-experience'"
+        <a
+          class="btn btn-ghost text-2xl"
+          (click)="scrollToSection('section-experience')"
           >Experience</a
         >
       </li>
       <li class="px-4">
-        <a class="btn btn-ghost text-2xl" [ngxScrollTo]="'#section-projects'"
+        <a
+          class="btn btn-ghost text-2xl"
+          (click)="scrollToSection('section-projects')"
           >Projects</a
         >
       </li>
@@ -55,13 +61,13 @@
         class="menu menu-sm dropdown-content mt-2 z-[1] rounded-box bg-base-100 p-2 shadow right-0 mobile-menu"
       >
         <li>
-          <a [ngxScrollTo]="'#section-about'">About</a>
+          <a (click)="scrollToSection('section-about')">About</a>
         </li>
         <li>
-          <a [ngxScrollTo]="'#section-experience'">Experience</a>
+          <a (click)="scrollToSection('section-experience')">Experience</a>
         </li>
         <li>
-          <a [ngxScrollTo]="'#section-projects'">Projects</a>
+          <a (click)="scrollToSection('section-projects')">Projects</a>
         </li>
       </ul>
     </div>

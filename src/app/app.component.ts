@@ -8,6 +8,7 @@ declare let particlesJS: any;
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  standalone: false,
 })
 export class AppComponent implements OnInit {
   title: string = 'Bernie_Belcher_Portfolio';

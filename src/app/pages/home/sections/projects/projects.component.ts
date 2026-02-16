@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-projects-component',
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'],
+  standalone: false,
 })
 export class ProjectsComponent implements OnInit {
   constructor() {}

@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-experience-component',
   templateUrl: './experience.component.html',
   styleUrls: ['./experience.component.scss'],
+  standalone: false,
 })
 export class ExperienceComponent implements OnInit {
   constructor() {}

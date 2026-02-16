@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-hero-component',
   templateUrl: './hero.component.html',
   styleUrls: ['./hero.component.scss'],
+  standalone: false,
 })
 export class HeroComponent implements OnInit {
   constructor() {}

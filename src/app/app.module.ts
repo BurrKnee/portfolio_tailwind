@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,7 +23,7 @@ import { BadgeComponent } from './shared/ui/badge/badge.component';
     ProjectsComponent,
     BadgeComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, ScrollToModule.forRoot()],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -15,10 +15,18 @@ describe('BadgeComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(BadgeComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {
+    fixture.detectChanges();
     expect(component).toBeTruthy();
+  });
+
+  it('should render the provided value', () => {
+    fixture.componentRef.setInput('value', 'Angular');
+    fixture.detectChanges();
+
+    const badge = fixture.nativeElement.querySelector('span') as HTMLElement;
+    expect(badge.textContent?.trim()).toBe('Angular');
   });
 });

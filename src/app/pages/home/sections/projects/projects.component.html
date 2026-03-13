@@ -1,150 +1,58 @@
 <h1>Projects</h1>
 <div class="content pt-4">
   <div class="project-grid">
-    <!-- Project 1 -->
-    <div class="project">
-      <div class="project-wrap">
-        <div class="project-img">
-          <img src="assets/img/portfolio/jmb-website.png" />
+    @for (project of projects; track project.title) {
+      <article class="project" (click)="openCaseStudy(project)">
+        <div class="project-wrap">
+          <div class="project-img">
+            <img [src]="project.image" [alt]="project.alt" />
+          </div>
+          <div class="project-text">
+            <span class="project-title">{{ project.title }}</span>
+            <p class="project-parragraph">
+              {{ project.summary }}
+            </p>
+            <ul class="project-stack" aria-label="Project skills and tools">
+              @for (item of project.stack; track item) {
+                <li>{{ item }}</li>
+              }
+            </ul>
+          </div>
         </div>
-        <div class="project-text">
-          <span class="project-title">JMB Architects Redesign</span>
-          <p class="project-parragraph">
-            JMB Architects' website was redesigned, replacing an outdated
-            platform with a Squarespace site enhanced by custom HTML and CSS.
-            This allowed the client to easily update content without relying on
-            a developer. The process included wireframing, high-fidelity mockups
-            in Figma, and user testing. Within two weeks of launch, the new site
-            generated multiple inquiries and secured a new client.
-          </p>
-        </div>
-      </div>
-      <div class="project-buttons">
-        <div class="project-button">
-          <a
-            href="https://www.jmbarchitect.com"
-            target="_blank"
-            aria-label="web"
-          >
-            <span class="material-symbols-outlined"> language </span>
-          </a>
-        </div>
-      </div>
-    </div>
 
-    <!-- Project 2 -->
-    <div class="project">
-      <div class="project-wrap">
-        <div class="project-img">
-          <img src="assets/img/portfolio/fti-wopr.png" />
-        </div>
-        <div class="project-text">
-          <span class="project-title">WOPR</span>
-          <p class="project-parragraph">
-            WOPR is a next-generation, end-to-end wargaming platform that
-            expands scale and collaboration across land, sea, air, space, cyber,
-            and logistics. Built for mission-specific planning, training, and
-            analysis, it delivers real-time insights with AI-assisted decision
-            support, effects-based modeling, and customizable visualizations.
-            Open, interoperable workflows enable cross-agency coordination,
-            rapid iteration, and outcomes for leaders and operators.
-          </p>
-        </div>
-      </div>
-      <div class="project-buttons">
-        <div class="project-button">
-          <a
-            href="https://www.ftidefense.com/capabilities-wargaming"
-            target="_blank"
-            aria-label="web"
-          >
-            <span class="material-symbols-outlined"> language </span>
-          </a>
-        </div>
-      </div>
-    </div>
+        <div class="project-footer">
+          <div class="project-buttons">
+            @for (link of project.links; track link.href) {
+              <div class="project-button">
+                <a
+                  [href]="link.href"
+                  target="_blank"
+                  [attr.aria-label]="link.label"
+                  (click)="$event.stopPropagation()"
+                >
+                  <span class="material-symbols-outlined"> {{ link.icon }} </span>
+                </a>
+              </div>
+            }
+          </div>
 
-    <!-- Project 3 -->
-    <div class="project">
-      <div class="project-wrap">
-        <div class="project-img">
-          <img src="assets/img/portfolio/purple-hex.png" />
-        </div>
-        <div class="project-text">
-          <span class="project-title">HelixIQ</span>
-          <p class="project-parragraph">
-            Secure AI for sensitive industries, built to run inside your
-            environment with full data control. HelixIQ uses only approved
-            internal content to deliver compliant, accurate answers and faster
-            workflows across government, healthcare, and regulated enterprise
-            teams. Air-gapped and private cloud friendly, it supports modern AI
-            without sacrificing sovereignty or security.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Project 4 -->
-    <div class="project">
-      <div class="project-wrap">
-        <div class="project-img">
-          <img src="assets/img/portfolio/land-grant-goods.png" />
-        </div>
-        <div class="project-text">
-          <span class="project-title">Content Stratagy</span>
-          <p class="project-parragraph">
-            Land Grant Goods, a student-run company producing honey, jam, and
-            tea, needed a cohesive content strategy for promoting products and
-            engaging with their audience. As part of a team of four UX
-            designers, a comprehensive guide was created to ensure consistent
-            messaging across all platforms. This document serves as a clear,
-            accessible resource for current and future team members,
-            streamlining communication and brand voice.
-          </p>
-        </div>
-      </div>
-      <div class="project-buttons">
-        <div class="project-button">
-          <a
-            href="assets/files/Land-Grant-Goods.pdf"
-            target="_blank"
-            aria-label="web"
+          <button
+            type="button"
+            class="case-study-toggle"
+            (click)="$event.stopPropagation(); openCaseStudy(project)"
           >
-            <span class="material-symbols-outlined"> article </span>
-          </a>
+            <span>Read case study</span>
+            <span class="material-symbols-outlined">
+              open_in_new
+            </span>
+          </button>
         </div>
-      </div>
-    </div>
-
-    <!-- Project 5 -->
-    <div class="project">
-      <div class="project-wrap">
-        <div class="project-img">
-          <img src="assets/img/portfolio/city-mockup.png" />
-        </div>
-        <div class="project-text">
-          <span class="project-title">City Redisign</span>
-          <p class="project-parragraph">
-            A redesign of Lansing, Michigan's city website aimed to improve its
-            usability. The site, used for tasks like paying tickets and applying
-            for permits, was difficult to navigate. The redesign involved
-            analyzing other city websites, developing user flows, and creating
-            wireframes and a style guide. Extensive research was conducted to
-            ensure a more user-friendly experience.
-          </p>
-        </div>
-      </div>
-      <div class="project-buttons">
-        <div class="project-button">
-          <a
-            href="assets/files/Lansing-Redesign.pdf"
-            target="_blank"
-            aria-label="web"
-          >
-            <span class="material-symbols-outlined"> article </span>
-          </a>
-        </div>
-      </div>
-    </div>
+      </article>
+    }
   </div>
 </div>
+
+<app-case-study-modal
+  [project]="selectedProject"
+  (close)="closeCaseStudy()"
+></app-case-study-modal>

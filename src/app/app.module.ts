@@ -9,6 +9,7 @@ import { AboutComponent } from './pages/home/sections/about/about.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { ExperienceComponent } from './pages/home/sections/experience/experience.component';
 import { ProjectsComponent } from './pages/home/sections/projects/projects.component';
+import { CaseStudyModalComponent } from './pages/home/sections/projects/case-study-modal/case-study-modal.component';
 
 import { BadgeComponent } from './shared/ui/badge/badge.component';
 
@@ -21,6 +22,7 @@ import { BadgeComponent } from './shared/ui/badge/badge.component';
     FooterComponent,
     ExperienceComponent,
     ProjectsComponent,
+    CaseStudyModalComponent,
     BadgeComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],

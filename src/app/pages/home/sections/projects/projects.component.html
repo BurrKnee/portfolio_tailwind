@@ -30,7 +30,9 @@
                   [attr.aria-label]="link.label"
                   (click)="$event.stopPropagation()"
                 >
-                  <span class="material-symbols-outlined"> {{ link.icon }} </span>
+                  <span class="material-symbols-outlined">
+                    {{ link.icon }}
+                  </span>
                 </a>
               </div>
             }
@@ -42,9 +44,7 @@
             (click)="$event.stopPropagation(); openCaseStudy(project)"
           >
             <span>Read case study</span>
-            <span class="material-symbols-outlined">
-              open_in_new
-            </span>
+            <span class="material-symbols-outlined"> open_in_new </span>
           </button>
         </div>
       </article>

@@ -1,0 +1,74 @@
+@if (project) {
+  <div
+    class="case-study-modal"
+    (click)="requestClose()"
+    aria-modal="true"
+    role="dialog"
+  >
+    <div
+      class="case-study-modal__panel"
+      (click)="$event.stopPropagation()"
+      [attr.aria-label]="project.title + ' case study'"
+    >
+      <div class="case-study-modal__header">
+        <div>
+          <p class="case-study-modal__eyebrow">Case Study</p>
+          <h2>{{ project.title }}</h2>
+        </div>
+        <button
+          type="button"
+          class="case-study-modal__close"
+          (click)="requestClose()"
+          aria-label="Close case study"
+        >
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+
+      <p class="case-study-modal__summary">{{ project.summary }}</p>
+
+      <div class="case-study-modal__content">
+        <section class="case-study-section">
+          <span class="case-study-label">
+            <span class="material-symbols-outlined">warning</span>
+            <span>Challenge</span>
+          </span>
+          <p>{{ project.caseStudy.problem }}</p>
+        </section>
+
+        <section class="case-study-section">
+          <span class="case-study-label">
+            <span class="material-symbols-outlined">route</span>
+            <span>Approach</span>
+          </span>
+          <ul>
+            @for (item of project.caseStudy.solution; track item) {
+              <li>{{ item }}</li>
+            }
+          </ul>
+        </section>
+
+        <section class="case-study-section">
+          <span class="case-study-label">
+            <span class="material-symbols-outlined">trending_up</span>
+            <span>Impact</span>
+          </span>
+          <ul>
+            @for (item of project.caseStudy.outcome; track item) {
+              <li>{{ item }}</li>
+            }
+          </ul>
+        </section>
+      </div>
+
+      <div class="case-study-modal__links">
+        @for (link of project.links; track link.href) {
+          <a [href]="link.href" target="_blank" class="case-study-modal__link">
+            <span class="material-symbols-outlined">{{ link.icon }}</span>
+            <span>{{ link.label }}</span>
+          </a>
+        }
+      </div>
+    </div>
+  </div>
+}

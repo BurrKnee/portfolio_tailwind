@@ -1,0 +1,33 @@
+<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cursorFill" x1="6" y1="4" x2="25" y2="31" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#73F7F0"/>
+      <stop offset="1" stop-color="#5FA7FF"/>
+    </linearGradient>
+    <linearGradient id="cursorStroke" x1="6" y1="4" x2="25" y2="31" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6BECE5"/>
+      <stop offset="1" stop-color="#4E90F0"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="0.55" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <g filter="url(#glow)">
+    <path
+      d="M6 4L29 15.5L19.8 18.6L24.8 29.8L20.1 31.8L15 20.6L8.7 26.2L6 4Z"
+      fill="url(#cursorFill)"
+      stroke="url(#cursorStroke)"
+      stroke-width="1.2"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M12.5 11.1L21.1 16.8L17 18.2L20.6 26.1L18.6 26.9L15 19L11.7 21.8L12.5 11.1Z"
+      fill="#F4FFFE"
+      fill-opacity="0.42"
+    />
+  </g>
+</svg>

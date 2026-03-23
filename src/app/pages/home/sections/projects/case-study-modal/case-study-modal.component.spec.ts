@@ -77,9 +77,11 @@ describe('CaseStudyModalComponent', () => {
     fixture.detectChanges();
 
     const sections = fixture.debugElement.queryAll(By.css('.case-study-section'));
+    const links = fixture.debugElement.queryAll(By.css('.case-study-modal__link'));
     const text = fixture.nativeElement.textContent;
 
     expect(sections.length).toBe(2);
+    expect(links.length).toBe(1);
     expect(text).toContain('Overview');
     expect(text).toContain('Overview paragraph');
     expect(text).toContain('Impact point');
@@ -111,5 +113,39 @@ describe('CaseStudyModalComponent', () => {
     closeButton.triggerEventHandler('click', new MouseEvent('click'));
 
     expect(component.close.emit).toHaveBeenCalled();
+  });
+
+  it('emits close when the backdrop is clicked', () => {
+    component.project = projectWithSections;
+    fixture.detectChanges();
+    spyOn(component.close, 'emit');
+
+    const backdrop = fixture.debugElement.query(By.css('.case-study-modal'));
+    backdrop.triggerEventHandler('click', new MouseEvent('click'));
+
+    expect(component.close.emit).toHaveBeenCalled();
+  });
+
+  it('does not emit close when the panel is clicked', () => {
+    component.project = projectWithSections;
+    fixture.detectChanges();
+    spyOn(component.close, 'emit');
+
+    const stopPropagation = jasmine.createSpy('stopPropagation');
+    const panel = fixture.debugElement.query(By.css('.case-study-modal__panel'));
+    panel.triggerEventHandler('click', { stopPropagation });
+
+    expect(stopPropagation).toHaveBeenCalled();
+    expect(component.close.emit).not.toHaveBeenCalled();
+  });
+
+  it('renders project links with their href attributes', () => {
+    component.project = projectWithSections;
+    fixture.detectChanges();
+
+    const link = fixture.debugElement.query(By.css('.case-study-modal__link'));
+
+    expect(link.attributes['href']).toBe('/example');
+    expect(link.nativeElement.textContent).toContain('Read more');
   });
 });

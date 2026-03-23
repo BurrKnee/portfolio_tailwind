@@ -58,4 +58,47 @@ describe('ProjectsComponent', () => {
 
     expect(component.selectedProject).toBe(projects[0]);
   });
+
+  it('opens the selected project when a project card is clicked', () => {
+    const card = fixture.debugElement.query(By.css('.project'));
+
+    card.triggerEventHandler('click', new MouseEvent('click'));
+    fixture.detectChanges();
+
+    expect(component.selectedProject).toBe(projects[0]);
+  });
+
+  it('renders the selected project in the case study modal', () => {
+    const localFixture = TestBed.createComponent(ProjectsComponent);
+    const localComponent = localFixture.componentInstance;
+    localComponent.selectedProject = projects[1];
+    localFixture.detectChanges();
+
+    const modalTitle = localFixture.debugElement.query(
+      By.css('.case-study-modal__header h2'),
+    );
+
+    expect(modalTitle.nativeElement.textContent).toContain(projects[1].title);
+  });
+
+  it('closes the case study when the modal emits close', () => {
+    const localFixture = TestBed.createComponent(ProjectsComponent);
+    const localComponent = localFixture.componentInstance;
+    localComponent.selectedProject = projects[0];
+    document.body.style.overflow = 'hidden';
+    localFixture.detectChanges();
+
+    const modal = localFixture.debugElement.query(
+      By.directive(CaseStudyModalComponent),
+    );
+    modal.triggerEventHandler('close', undefined);
+    localFixture.detectChanges();
+
+    expect(localComponent.selectedProject).toBeNull();
+    expect(document.body.style.overflow).toBe('');
+  });
+
+  it('returns the project title from trackByProjectTitle', () => {
+    expect(component.trackByProjectTitle(0, projects[2])).toBe(projects[2].title);
+  });
 });

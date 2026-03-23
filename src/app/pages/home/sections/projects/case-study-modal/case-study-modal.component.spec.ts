@@ -154,4 +154,25 @@ describe('CaseStudyModalComponent', () => {
     expect(link.attributes['href']).toBe('/example');
     expect(link.nativeElement.textContent).toContain('Read more');
   });
+
+  it('adds the sticky header shadow after the panel is scrolled', () => {
+    component.project = projectWithSections;
+    fixture.detectChanges();
+
+    const panel = fixture.debugElement.query(
+      By.css('.case-study-modal__panel')
+    );
+    const header = fixture.debugElement.query(
+      By.css('.case-study-modal__header')
+    );
+
+    panel.triggerEventHandler('scroll', {
+      target: { scrollTop: 24 },
+    });
+    fixture.detectChanges();
+
+    expect(header.nativeElement.classList).toContain(
+      'case-study-modal__header--scrolled'
+    );
+  });
 });

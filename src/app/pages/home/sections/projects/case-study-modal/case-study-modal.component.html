@@ -8,9 +8,13 @@
     <div
       class="case-study-modal__panel"
       (click)="$event.stopPropagation()"
+      (scroll)="onPanelScroll($event)"
       [attr.aria-label]="project.title + ' case study'"
     >
-      <div class="case-study-modal__header">
+      <div
+        class="case-study-modal__header"
+        [class.case-study-modal__header--scrolled]="isScrolled"
+      >
         <div>
           <p class="case-study-modal__eyebrow">Case Study</p>
           <h2>{{ project.title }}</h2>

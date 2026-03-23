@@ -4,10 +4,18 @@ export interface ProjectLink {
   href: string;
 }
 
+export interface ProjectCaseStudySection {
+  title: string;
+  icon: string;
+  paragraphs?: string[];
+  bullets?: string[];
+}
+
 export interface ProjectCaseStudy {
   problem: string;
   solution: string[];
   outcome: string[];
+  sections?: ProjectCaseStudySection[];
 }
 
 export interface Project {

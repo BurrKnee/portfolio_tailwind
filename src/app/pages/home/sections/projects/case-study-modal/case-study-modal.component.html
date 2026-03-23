@@ -8,9 +8,13 @@
     <div
       class="case-study-modal__panel"
       (click)="$event.stopPropagation()"
+      (scroll)="onPanelScroll($event)"
       [attr.aria-label]="project.title + ' case study'"
     >
-      <div class="case-study-modal__header">
+      <div
+        class="case-study-modal__header"
+        [class.case-study-modal__header--scrolled]="isScrolled"
+      >
         <div>
           <p class="case-study-modal__eyebrow">Case Study</p>
           <h2>{{ project.title }}</h2>
@@ -28,37 +32,64 @@
       <p class="case-study-modal__summary">{{ project.summary }}</p>
 
       <div class="case-study-modal__content">
-        <section class="case-study-section">
-          <span class="case-study-label">
-            <span class="material-symbols-outlined">warning</span>
-            <span>Challenge</span>
-          </span>
-          <p>{{ project.caseStudy.problem }}</p>
-        </section>
+        @if (project.caseStudy.sections?.length) {
+          @for (section of project.caseStudy.sections; track section.title) {
+            <section class="case-study-section">
+              <span class="case-study-label">
+                <span class="material-symbols-outlined">{{
+                  section.icon
+                }}</span>
+                <span>{{ section.title }}</span>
+              </span>
 
-        <section class="case-study-section">
-          <span class="case-study-label">
-            <span class="material-symbols-outlined">route</span>
-            <span>Approach</span>
-          </span>
-          <ul>
-            @for (item of project.caseStudy.solution; track item) {
-              <li>{{ item }}</li>
-            }
-          </ul>
-        </section>
+              @if (section.paragraphs?.length) {
+                @for (paragraph of section.paragraphs; track paragraph) {
+                  <p>{{ paragraph }}</p>
+                }
+              }
 
-        <section class="case-study-section">
-          <span class="case-study-label">
-            <span class="material-symbols-outlined">trending_up</span>
-            <span>Impact</span>
-          </span>
-          <ul>
-            @for (item of project.caseStudy.outcome; track item) {
-              <li>{{ item }}</li>
-            }
-          </ul>
-        </section>
+              @if (section.bullets?.length) {
+                <ul>
+                  @for (item of section.bullets; track item) {
+                    <li>{{ item }}</li>
+                  }
+                </ul>
+              }
+            </section>
+          }
+        } @else {
+          <section class="case-study-section">
+            <span class="case-study-label">
+              <span class="material-symbols-outlined">warning</span>
+              <span>Challenge</span>
+            </span>
+            <p>{{ project.caseStudy.problem }}</p>
+          </section>
+
+          <section class="case-study-section">
+            <span class="case-study-label">
+              <span class="material-symbols-outlined">route</span>
+              <span>Approach</span>
+            </span>
+            <ul>
+              @for (item of project.caseStudy.solution; track item) {
+                <li>{{ item }}</li>
+              }
+            </ul>
+          </section>
+
+          <section class="case-study-section">
+            <span class="case-study-label">
+              <span class="material-symbols-outlined">trending_up</span>
+              <span>Impact</span>
+            </span>
+            <ul>
+              @for (item of project.caseStudy.outcome; track item) {
+                <li>{{ item }}</li>
+              }
+            </ul>
+          </section>
+        }
       </div>
 
       <div class="case-study-modal__links">

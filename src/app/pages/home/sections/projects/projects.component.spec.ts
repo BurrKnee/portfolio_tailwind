@@ -75,7 +75,7 @@ describe('ProjectsComponent', () => {
     localFixture.detectChanges();
 
     const modalTitle = localFixture.debugElement.query(
-      By.css('.case-study-modal__header h2'),
+      By.css('.case-study-modal__header h2')
     );
 
     expect(modalTitle.nativeElement.textContent).toContain(projects[1].title);
@@ -89,7 +89,7 @@ describe('ProjectsComponent', () => {
     localFixture.detectChanges();
 
     const modal = localFixture.debugElement.query(
-      By.directive(CaseStudyModalComponent),
+      By.directive(CaseStudyModalComponent)
     );
     modal.triggerEventHandler('close', undefined);
     localFixture.detectChanges();
@@ -99,6 +99,8 @@ describe('ProjectsComponent', () => {
   });
 
   it('returns the project title from trackByProjectTitle', () => {
-    expect(component.trackByProjectTitle(0, projects[2])).toBe(projects[2].title);
+    expect(component.trackByProjectTitle(0, projects[2])).toBe(
+      projects[2].title
+    );
   });
 });

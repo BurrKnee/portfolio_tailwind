@@ -30,7 +30,7 @@ describe('ExperienceComponent', () => {
 
     expect(heading.nativeElement.textContent.trim()).toBe('Experience');
     expect(resumeLink.attributes['href']).toContain(
-      'assets/files/Bernie-Belcher-Resume.pdf',
+      'assets/files/Bernie-Belcher-Resume.pdf'
     );
     expect(resumeLink.attributes['download']).toBe('Bernie-Belcher-Resume');
     expect(resumeLink.nativeElement.textContent).toContain('Download Resume');
@@ -48,7 +48,9 @@ describe('ExperienceComponent', () => {
   });
 
   it('shows the current role as latest', () => {
-    const latestBadge = fixture.debugElement.query(By.css('li:first-child h3 span'));
+    const latestBadge = fixture.debugElement.query(
+      By.css('li:first-child h3 span')
+    );
 
     expect(latestBadge.nativeElement.textContent.trim()).toBe('Latest');
   });
@@ -67,7 +69,7 @@ describe('ExperienceComponent', () => {
   it('renders badge components for skills across roles', () => {
     const badges = fixture.debugElement.queryAll(By.directive(BadgeComponent));
     const badgeText = badges.map((badge) =>
-      badge.nativeElement.textContent.replace(/\s+/g, ' ').trim(),
+      badge.nativeElement.textContent.replace(/\s+/g, ' ').trim()
     );
 
     expect(badges.length).toBe(10);

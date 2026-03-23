@@ -76,8 +76,12 @@ describe('CaseStudyModalComponent', () => {
     component.project = projectWithSections;
     fixture.detectChanges();
 
-    const sections = fixture.debugElement.queryAll(By.css('.case-study-section'));
-    const links = fixture.debugElement.queryAll(By.css('.case-study-modal__link'));
+    const sections = fixture.debugElement.queryAll(
+      By.css('.case-study-section')
+    );
+    const links = fixture.debugElement.queryAll(
+      By.css('.case-study-modal__link')
+    );
     const text = fixture.nativeElement.textContent;
 
     expect(sections.length).toBe(2);
@@ -108,7 +112,7 @@ describe('CaseStudyModalComponent', () => {
     spyOn(component.close, 'emit');
 
     const closeButton = fixture.debugElement.query(
-      By.css('.case-study-modal__close'),
+      By.css('.case-study-modal__close')
     );
     closeButton.triggerEventHandler('click', new MouseEvent('click'));
 
@@ -132,7 +136,9 @@ describe('CaseStudyModalComponent', () => {
     spyOn(component.close, 'emit');
 
     const stopPropagation = jasmine.createSpy('stopPropagation');
-    const panel = fixture.debugElement.query(By.css('.case-study-modal__panel'));
+    const panel = fixture.debugElement.query(
+      By.css('.case-study-modal__panel')
+    );
     panel.triggerEventHandler('click', { stopPropagation });
 
     expect(stopPropagation).toHaveBeenCalled();

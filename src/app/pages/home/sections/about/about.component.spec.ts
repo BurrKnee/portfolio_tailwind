@@ -45,7 +45,7 @@ describe('AboutComponent', () => {
 
     const links = fixture.debugElement.queryAll(By.css('.dev-logos a'));
     const labels = links.map((link) =>
-      link.nativeElement.textContent.replace(/\s+/g, ' ').trim(),
+      link.nativeElement.textContent.replace(/\s+/g, ' ').trim()
     );
 
     expect(links.length).toBe(12);

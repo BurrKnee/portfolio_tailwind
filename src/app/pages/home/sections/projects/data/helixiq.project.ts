@@ -5,7 +5,7 @@ export const helixIqProject: Project = {
   image: 'assets/img/portfolio/purple-hex.png',
   alt: 'HelixIQ brand mark',
   summary:
-    'HelixIQ is a secure AI platform for sensitive industries that need modern AI without losing control of deployment, data, or compliance posture. I led the product design and helped shape a reusable codebase that could support multiple clients through configurable themes and deployment variables while keeping the experience clear for both technical and non-technical audiences.',
+    'HelixIQ is a secure AI platform for sensitive industries that need modern AI without giving up deployment control, data ownership, or compliance posture. I led the product design and helped shape a reusable codebase that could support multiple clients through configurable themes and deployment variables.',
   stack: [
     'Product design',
     'Design systems',
@@ -38,8 +38,8 @@ export const helixIqProject: Project = {
         title: 'Overview',
         icon: 'overview',
         paragraphs: [
-          'HelixIQ was positioned as secure AI for government, healthcare, defense, and other regulated environments where public AI tools introduce unacceptable risk. The product needed to explain sophisticated technical safeguards while still feeling understandable, credible, and useful to a wide range of buyers and users.',
-          'I was responsible for designing the experience and helping create a codebase that could be reused across clients. That meant the work had to support strong product storytelling while also being flexible enough to handle multiple themes, deployment configurations, and future rollout needs.',
+          'HelixIQ was positioned as secure AI for government, healthcare, defense, and other regulated environments where public AI tools introduce unacceptable risk. The product needed to explain technical safeguards clearly while still feeling credible and understandable to different kinds of buyers and users.',
+          'I was responsible for designing the experience and helping create a codebase that could be reused across clients. The work had to support both clear product storytelling and flexible implementation across themes and deployment setups.',
         ],
       },
       {
@@ -112,7 +112,7 @@ export const helixIqProject: Project = {
         title: 'Outcome',
         icon: 'trending_up',
         paragraphs: [
-          'The result was a product experience that framed HelixIQ as a serious platform for regulated environments rather than a generic AI tool with added compliance language. The design helped clarify why the product was different, who it was for, and how it could be deployed without compromising control.',
+          'The result was a product experience that positioned HelixIQ as a serious platform for regulated environments rather than a generic AI tool with added compliance language. The design clarified why the product was different, who it was for, and how it could be deployed without compromising control.',
         ],
         bullets: [
           'Created a clearer story for both technical and non-technical audiences.',

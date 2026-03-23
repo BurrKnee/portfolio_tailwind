@@ -5,7 +5,7 @@ export const cityRedesignProject: Project = {
   image: 'assets/img/portfolio/city-mockup.png',
   alt: 'City website redesign mockup',
   summary:
-    "This project rethought Lansing, Michigan's city website around resident tasks instead of internal government structure. Using scenario-based UX research, competitor analysis, user flows, wireframes, and a style guide, the redesign focused on making common civic actions like paying tickets, finding jobs, reporting issues, and locating events easier to complete.",
+    "This project rethought Lansing, Michigan's city website around resident tasks instead of internal government structure. Using scenario-based UX research, user flows, wireframes, and a style guide, the redesign focused on making common civic actions like paying tickets, finding jobs, reporting issues, and locating events easier to complete.",
   stack: ['Civic UX', 'User flows', 'Wireframing', 'Style guide'],
   links: [
     {

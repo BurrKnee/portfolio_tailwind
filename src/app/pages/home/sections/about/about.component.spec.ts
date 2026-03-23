@@ -10,7 +10,7 @@ describe('AboutComponent', () => {
     }).compileComponents();
   });
 
-  it('should create the app', () => {
+  it('should create', () => {
     const fixture = TestBed.createComponent(AboutComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();

@@ -32,6 +32,27 @@ describe('CaseStudyModalComponent', () => {
           paragraphs: ['Overview paragraph'],
         },
         {
+          title: 'Gallery',
+          icon: 'image',
+          images: [
+            {
+              src: 'assets/img/example-1.png',
+              alt: 'Example image one',
+              label: 'Example 1',
+            },
+            {
+              src: 'assets/img/example-2.png',
+              alt: 'Example image two',
+              label: 'Example 2',
+            },
+            {
+              src: 'assets/img/example-3.png',
+              alt: 'Example image three',
+              label: 'Example 3',
+            },
+          ],
+        },
+        {
           title: 'Outcome',
           icon: 'trending_up',
           bullets: ['Impact point'],
@@ -51,6 +72,46 @@ describe('CaseStudyModalComponent', () => {
       problem: 'Fallback problem',
       solution: ['Fallback solution'],
       outcome: ['Fallback impact'],
+    },
+  };
+
+  const projectWithSingleImageAndBadges: Project = {
+    title: 'Badge Project',
+    image: 'assets/img/example.png',
+    alt: 'Badge project',
+    summary: 'A project with badge links and a single image section.',
+    stack: ['UI'],
+    links: [
+      {
+        icon: 'language',
+        label: 'Visit website',
+        href: 'https://example.com',
+      },
+      {
+        icon: 'phone_iphone',
+        label: 'App Store',
+        href: 'https://example.com/app-store',
+        badgeSrc: 'assets/img/app-store.png',
+        badgeAlt: 'Download on the App Store',
+      },
+    ],
+    caseStudy: {
+      problem: 'Badge problem',
+      solution: ['Badge solution'],
+      outcome: ['Badge outcome'],
+      sections: [
+        {
+          title: 'Visual',
+          icon: 'image',
+          images: [
+            {
+              src: 'assets/img/single.png',
+              alt: 'Single example image',
+              label: 'Single',
+            },
+          ],
+        },
+      ],
     },
   };
 
@@ -84,12 +145,44 @@ describe('CaseStudyModalComponent', () => {
     );
     const text = fixture.nativeElement.textContent;
 
-    expect(sections.length).toBe(2);
+    expect(sections.length).toBe(3);
     expect(links.length).toBe(1);
     expect(text).toContain('Overview');
     expect(text).toContain('Overview paragraph');
     expect(text).toContain('Impact point');
     expect(text).not.toContain('Challenge');
+  });
+
+  it('renders section images and applies the three-image layout for a three-up gallery', () => {
+    component.project = projectWithSections;
+    fixture.detectChanges();
+
+    const gallery = fixture.debugElement.query(
+      By.css('.case-study-section__images')
+    );
+    const images = fixture.debugElement.queryAll(
+      By.css('.case-study-image-card img')
+    );
+
+    expect(gallery.nativeElement.style.gridTemplateColumns).toContain(
+      'repeat(3'
+    );
+    expect(images.length).toBe(3);
+    expect(images[0].attributes['alt']).toBe('Example image one');
+    expect(fixture.nativeElement.textContent).toContain('Example 1');
+  });
+
+  it('applies the single-image layout class when a section contains one image', () => {
+    component.project = projectWithSingleImageAndBadges;
+    fixture.detectChanges();
+
+    const gallery = fixture.debugElement.query(
+      By.css('.case-study-section__images')
+    );
+
+    expect(gallery.nativeElement.classList).toContain(
+      'case-study-section__images--single'
+    );
   });
 
   it('renders the fallback challenge, approach, and impact sections when no sections are provided', () => {
@@ -153,6 +246,22 @@ describe('CaseStudyModalComponent', () => {
 
     expect(link.attributes['href']).toBe('/example');
     expect(link.nativeElement.textContent).toContain('Read more');
+  });
+
+  it('renders badge image links in the modal when a link provides badge assets', () => {
+    component.project = projectWithSingleImageAndBadges;
+    fixture.detectChanges();
+
+    const badgeLink = fixture.debugElement.query(
+      By.css('.case-study-modal__link--badge')
+    );
+    const badgeImage = fixture.debugElement.query(
+      By.css('.case-study-modal__link--badge img')
+    );
+
+    expect(badgeLink.attributes['href']).toBe('https://example.com/app-store');
+    expect(badgeImage.attributes['src']).toBe('assets/img/app-store.png');
+    expect(badgeImage.attributes['alt']).toBe('Download on the App Store');
   });
 
   it('adds the sticky header shadow after the panel is scrolled', () => {

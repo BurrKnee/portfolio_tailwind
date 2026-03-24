@@ -2,7 +2,7 @@ import { Project } from '../projects.models';
 
 export const jmbArchitectsProject: Project = {
   title: 'JMB Architects Redesign',
-  image: 'assets/img/portfolio/jmb-website.png',
+  image: 'assets/img/portfolio/jmb-architects/jmb-website.png',
   alt: 'Screenshot of the JMB Architects redesign',
   summary:
     "JMB Architects had a dated website that no longer reflected the quality of the firm's work and made ongoing updates harder than they needed to be. I redesigned the site in Squarespace, using custom HTML and CSS where needed, so the client could manage content independently, especially project imagery and galleries.",
@@ -75,6 +75,25 @@ export const jmbArchitectsProject: Project = {
           'Modernized the visual language to replace the dated look and feel of the previous site.',
           'Improved the presentation of galleries and imagery so the work itself became the focal point.',
           'Created a cleaner, more professional digital presence aligned with the expectations of prospective architecture clients.',
+        ],
+      },
+      {
+        title: 'Before and After',
+        icon: 'compare',
+        paragraphs: [
+          'A direct comparison shows how the redesign improved hierarchy, presentation, and overall credibility while keeping the site easy for the client to maintain.',
+        ],
+        images: [
+          {
+            src: 'assets/img/portfolio/jmb-architects/website-old.png',
+            alt: 'The previous JMB Architects website before the redesign.',
+            label: 'Before',
+          },
+          {
+            src: 'assets/img/portfolio/jmb-architects/website-new.png',
+            alt: 'The redesigned JMB Architects website after the refresh.',
+            label: 'After',
+          },
         ],
       },
       {

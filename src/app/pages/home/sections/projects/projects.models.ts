@@ -2,6 +2,16 @@ export interface ProjectLink {
   icon: string;
   label: string;
   href: string;
+  iconSrc?: string;
+  iconAlt?: string;
+  badgeSrc?: string;
+  badgeAlt?: string;
+}
+
+export interface ProjectCaseStudyImage {
+  src: string;
+  alt: string;
+  label: string;
 }
 
 export interface ProjectCaseStudySection {
@@ -9,6 +19,7 @@ export interface ProjectCaseStudySection {
   icon: string;
   paragraphs?: string[];
   bullets?: string[];
+  images?: ProjectCaseStudyImage[];
 }
 
 export interface ProjectCaseStudy {

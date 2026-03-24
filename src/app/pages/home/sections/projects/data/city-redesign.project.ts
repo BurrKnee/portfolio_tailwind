@@ -2,7 +2,7 @@ import { Project } from '../projects.models';
 
 export const cityRedesignProject: Project = {
   title: 'City Redesign',
-  image: 'assets/img/portfolio/city-mockup.png',
+  image: 'assets/img/portfolio/city-redesign/city-mockup.png',
   alt: 'City website redesign mockup',
   summary:
     "This project rethought Lansing, Michigan's city website around resident tasks instead of internal government structure. Using scenario-based UX research, user flows, wireframes, and a style guide, the redesign focused on making common civic actions like paying tickets, finding jobs, reporting issues, and locating events easier to complete.",

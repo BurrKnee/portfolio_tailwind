@@ -30,9 +30,18 @@
                   [attr.aria-label]="link.label"
                   (click)="$event.stopPropagation()"
                 >
-                  <span class="material-symbols-outlined">
-                    {{ link.icon }}
-                  </span>
+                  @if (link.iconSrc) {
+                    <img
+                      [src]="link.iconSrc"
+                      [alt]="link.iconAlt || ''"
+                      width="28"
+                      height="28"
+                    />
+                  } @else {
+                    <span class="material-symbols-outlined">
+                      {{ link.icon }}
+                    </span>
+                  }
                 </a>
               </div>
             }

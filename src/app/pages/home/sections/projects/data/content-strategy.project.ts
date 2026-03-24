@@ -2,7 +2,7 @@ import { Project } from '../projects.models';
 
 export const contentStrategyProject: Project = {
   title: 'Content Strategy',
-  image: 'assets/img/portfolio/land-grant-goods.png',
+  image: 'assets/img/portfolio/content-strategy/land-grant-goods.png',
   alt: 'Land Grant Goods brand materials',
   summary:
     'Land Grant Goods, a student-run company producing honey, jam, and tea at Michigan State, needed a content system that could survive leadership turnover and keep the website, product messaging, and social channels aligned. Working on a four-person UX team, I helped create a strategy guide that turned research into repeatable rules for content, governance, and site structure.',

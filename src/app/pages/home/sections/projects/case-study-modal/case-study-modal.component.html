@@ -55,6 +55,37 @@
                   }
                 </ul>
               }
+
+              @if (section.images?.length) {
+                <div
+                  class="case-study-section__images"
+                  [class.case-study-section__images--single]="
+                    section.images?.length === 1
+                  "
+                  [style.grid-template-columns]="
+                    section.images?.length === 3
+                      ? 'repeat(3, minmax(0, 240px))'
+                      : null
+                  "
+                  [style.justify-content]="
+                    section.images?.length === 3 ? 'center' : null
+                  "
+                >
+                  @for (image of section.images; track image.src) {
+                    <figure class="case-study-image-card">
+                      <figcaption>{{ image.label }}</figcaption>
+                      <img
+                        [src]="image.src"
+                        [alt]="image.alt"
+                        [style.aspect-ratio]="
+                          section.images?.length === 3 ? '9 / 20' : null
+                        "
+                        loading="lazy"
+                      />
+                    </figure>
+                  }
+                </div>
+              }
             </section>
           }
         } @else {
@@ -94,9 +125,18 @@
 
       <div class="case-study-modal__links">
         @for (link of project.links; track link.href) {
-          <a [href]="link.href" target="_blank" class="case-study-modal__link">
-            <span class="material-symbols-outlined">{{ link.icon }}</span>
-            <span>{{ link.label }}</span>
+          <a
+            [href]="link.href"
+            target="_blank"
+            class="case-study-modal__link"
+            [class.case-study-modal__link--badge]="link.badgeSrc"
+          >
+            @if (link.badgeSrc) {
+              <img [src]="link.badgeSrc" [alt]="link.badgeAlt || link.label" />
+            } @else {
+              <span class="material-symbols-outlined">{{ link.icon }}</span>
+              <span>{{ link.label }}</span>
+            }
           </a>
         }
       </div>

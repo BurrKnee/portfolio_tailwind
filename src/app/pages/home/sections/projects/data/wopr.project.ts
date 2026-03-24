@@ -2,7 +2,7 @@ import { Project } from '../projects.models';
 
 export const woprProject: Project = {
   title: 'WOPR',
-  image: 'assets/img/portfolio/fti-wopr.png',
+  image: 'assets/img/portfolio/wopr/fti-wopr.png',
   alt: 'WOPR platform preview',
   summary:
     'WOPR is a next-generation wargaming platform for mission planning, simulation, analysis, and collaboration across multiple domains. I contributed to the frontend design and implementation, working with tools like Mapbox and Angular CDK to support real-time visualization, multi-window workflows, and communication tools for audit and analysis teams.',
@@ -95,6 +95,34 @@ export const woprProject: Project = {
           'AI-assisted workflows for move analysis, summaries, and decision support.',
           'Cross-domain views spanning cyber, space, logistics, and other mission threads.',
           'Collaboration patterns for analysts, adjudicators, players, and leaders.',
+        ],
+      },
+      {
+        title: 'Product Visual',
+        icon: 'image',
+        paragraphs: [
+          'This visual gives the case study a direct view of the platform and helps ground the interface discussion in the actual product.',
+        ],
+        images: [
+          {
+            src: 'assets/img/portfolio/wopr/fti-wopr.png',
+            alt: 'WOPR platform visual.',
+            label: 'WOPR interface',
+          },
+        ],
+      },
+      {
+        title: 'Map View',
+        icon: 'map',
+        paragraphs: [
+          'This map-focused view highlights the spatial side of the platform and the kind of mission-oriented visualization the interface needed to support.',
+        ],
+        images: [
+          {
+            src: 'assets/img/portfolio/wopr/fti-wopr-map.png',
+            alt: 'WOPR map view.',
+            label: 'WOPR map visualization',
+          },
         ],
       },
       {

@@ -2,7 +2,7 @@ import { Project } from '../projects.models';
 
 export const helixIqProject: Project = {
   title: 'HelixIQ',
-  image: 'assets/img/portfolio/purple-hex.png',
+  image: 'assets/img/portfolio/helixiq/helix.png',
   alt: 'HelixIQ brand mark',
   summary:
     'HelixIQ is a secure AI platform for sensitive industries that need modern AI without giving up deployment control, data ownership, or compliance posture. I led the product design and helped shape a reusable codebase that could support multiple clients through configurable themes and deployment variables.',
@@ -96,6 +96,20 @@ export const helixIqProject: Project = {
           'Customers retain ownership of their data, infrastructure, and model choices.',
           'The experience supports compliance-focused environments with messaging around HIPAA, SOC 2, NIST 800-171, and ISO 27001 alignment.',
           'End users get a familiar conversational workflow while technical teams retain governance and visibility.',
+        ],
+      },
+      {
+        title: 'Product Visual',
+        icon: 'image',
+        paragraphs: [
+          'This visual captures the product direction and helps anchor the platform messaging in a concrete interface.',
+        ],
+        images: [
+          {
+            src: 'assets/img/portfolio/helixiq/helix.png',
+            alt: 'HelixIQ product screenshot.',
+            label: 'HelixIQ interface',
+          },
         ],
       },
       {
